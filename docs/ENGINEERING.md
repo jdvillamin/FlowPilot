@@ -8,7 +8,7 @@
 **Related Documents:**
 
 - `REQUIREMENTS.md` — product requirements, features, API contracts, and security
-- `TEAM.md` — team collaboration and development workflow
+- `TEAM_WORKFLOW.md` — team collaboration and development workflow
 
 ---
 
@@ -37,7 +37,8 @@ Beyond delivering the product defined in `REQUIREMENTS.md`, FlowPilot also serve
 - Logging and monitoring
 - Automated testing
 - API documentation
-- Team-based Git workflow (see `TEAM.md`)
+- Team-based Git workflow (see `TEAM_WORKFLOW.md`)
+- Team-based Git workflow (see `TEAM_WORKFLOW.md`)
 
 ### Engineering Goals
 
@@ -194,7 +195,7 @@ The engineering work shall be considered successful when the following are demon
 6. Secrets are stored outside the source code repository.
 7. Logs, health checks, and basic metrics are available for monitoring.
 8. API endpoints are documented using OpenAPI 3.0.
-9. The team uses Git branches, pull requests, and code review (see `TEAM.md`).
+9. The team uses Git branches, pull requests, and code review (see `TEAM_WORKFLOW.md`).
 10. Automated tests cover core backend and mobile functionality.
 
 > For product acceptance criteria (ticket creation, board behavior, notifications, etc.), see `REQUIREMENTS.md`.
@@ -209,4 +210,4 @@ The engineering work shall be considered successful when the following are demon
 | Real-time features may be difficult to implement | Use near real-time updates through polling or event-driven notifications instead of requiring full WebSocket support. |
 | DevOps scope may become too large                | Prioritize Docker, GitHub Actions, RDS/S3 deployment, Flyway migrations, and basic monitoring first.                  |
 
-> For product-level risks (scope creep, AI privacy) see `REQUIREMENTS.md`. For team coordination risks, see `TEAM.md`.
+> For product-level risks (scope creep, AI privacy) see `REQUIREMENTS.md`. For team coordination risks, see `TEAM_WORKFLOW.md`.

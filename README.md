@@ -48,25 +48,21 @@ Key capabilities:
 
 Project specifications are split across three documents:
 
-- **[REQUIREMENTS.md](./REQUIREMENTS.md)** — product requirements, features, API contracts, security, and acceptance criteria
-- **[ENGINEERING.md](./ENGINEERING.md)** — technology stack, DevOps, deployment architecture, CI/CD pipeline, and testing
-- **[TEAM.md](./TEAM.md)** — team collaboration practices, ownership areas, and development workflow
+- **[docs/REQUIREMENTS.md](./docs/REQUIREMENTS.md)** — product requirements, features, API contracts, security, and acceptance criteria
+- **[docs/ENGINEERING.md](./docs/ENGINEERING.md)** — technology stack, DevOps, deployment architecture, CI/CD pipeline, and testing
+- **[docs/TEAM_WORKFLOW.md](./docs/TEAM_WORKFLOW.md)** — team collaboration practices, ownership areas, and development workflow
+- **[docs/SETUP.md](./docs/SETUP.md)** — local development setup (Docker Compose + backend)
 
 ---
 
 ## Getting Started
 
-> The sections below are placeholders. The team will fill these in as the project is scaffolded.
-
 ### Prerequisites
 
 - Java 17 or higher
-- Android Studio (latest stable) with Android SDK (min API 26)
-- Docker and Docker Compose
-- PostgreSQL 15+ (local or via Docker Compose)
-- AWS CLI (for cloud deployment)
-- Terraform (for infrastructure provisioning)
-- A Firebase project (for push notifications)
+- Docker and Docker Compose (for PostgreSQL)
+
+> Android and cloud setup will be added as those projects are scaffolded.
 
 ### Clone the Repository
 
@@ -75,33 +71,20 @@ git clone https://github.com/<org>/<repo>.git
 cd <repo>
 ```
 
-### Backend Setup
+### Backend Setup (Local)
 
 ```bash
-# TODO: add commands for
-#  - configuring environment variables / .env file
-#  - starting PostgreSQL via Docker Compose
-#  - running Flyway migrations
-#  - building and running the Spring Boot backend
+cp .env.example .env
+docker compose up -d postgres
+
+cd backend/flowpilot-backend
+SPRING_PROFILES_ACTIVE=local ./gradlew bootRun
 ```
 
-### Mobile App Setup
+Then verify:
 
-```bash
-# TODO: add steps for
-#  - opening the Android project in Android Studio
-#  - configuring the backend base URL
-#  - setting up the Firebase config file (google-services.json)
-#  - running the app on emulator or device
-```
-
-### Running Tests
-
-```bash
-# TODO: add commands for
-#  - backend unit and integration tests
-#  - Android unit and instrumentation tests
-```
+- `http://localhost:8080/actuator/health`
+- `http://localhost:8080/api/ping`
 
 ### Deployment
 
@@ -116,15 +99,15 @@ cd <repo>
 
 ## Project Status
 
-FlowPilot is currently in active development for Version 1. See [REQUIREMENTS.md](./REQUIREMENTS.md) for the full scope and [ENGINEERING.md](./ENGINEERING.md) for engineering acceptance criteria.
+FlowPilot is currently in active development for Version 1. See [docs/REQUIREMENTS.md](./docs/REQUIREMENTS.md) for the full scope and [docs/ENGINEERING.md](./docs/ENGINEERING.md) for engineering acceptance criteria.
 
-Items listed under "Post-Version 1 Future Enhancements" in [REQUIREMENTS.md](./REQUIREMENTS.md) are explicitly out of scope until Version 1 is complete.
+Items listed under "Post-Version 1 Future Enhancements" in [docs/REQUIREMENTS.md](./docs/REQUIREMENTS.md) are explicitly out of scope until Version 1 is complete.
 
 ---
 
 ## Contributing
 
-This project is built by a team following the practices in [TEAM.md](./TEAM.md). In short:
+This project is built by a team following the practices in [docs/TEAM_WORKFLOW.md](./docs/TEAM_WORKFLOW.md). In short:
 
 - Track work through GitHub Issues
 - Submit changes through pull requests

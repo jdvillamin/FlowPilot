@@ -8,7 +8,7 @@
 **Related Documents:**
 
 - `ENGINEERING.md` — technology stack, DevOps, deployment, and testing requirements
-- `TEAM.md` — team collaboration and development workflow
+- `TEAM_WORKFLOW.md` — team collaboration and development workflow
 
 ---
 
@@ -28,7 +28,7 @@ This document uses the following terms consistently:
 
 The project is intentionally scoped as a focused ticketing system rather than a complex, general-purpose workflow engine. Its main purpose is to help teams consolidate requests, monitor ticket progress, collaborate through comments, receive event-driven notifications, review basic dashboards, and optionally use AI assistance for ticket summaries and next-step recommendations.
 
-Beyond the application itself, FlowPilot also serves as a complete full-stack engineering project. See `ENGINEERING.md` for engineering scope and `TEAM.md` for team workflow.
+Beyond the application itself, FlowPilot also serves as a complete full-stack engineering project. See `ENGINEERING.md` for engineering scope and `TEAM_WORKFLOW.md` for team workflow.
 
 ---
 
@@ -408,7 +408,7 @@ The product shall be considered successful when the following are demonstrable:
 | AI integration may introduce privacy risks         | Redact sensitive data and make AI features optional and advisory only.                                                |
 | Real-time features may be difficult to implement   | Use near real-time updates through polling or event-driven notifications instead of requiring full WebSocket support. |
 
-> For engineering risks (cloud cost, DevOps scope) see `ENGINEERING.md`. For team risks, see `TEAM.md`.
+> For engineering risks (cloud cost, DevOps scope) see `ENGINEERING.md`. For team risks, see `TEAM_WORKFLOW.md`.
 
 ---
 
@@ -435,4 +435,4 @@ Team members shall treat these items as out of scope during Version 1 developmen
 
 ## 16. Summary
 
-FlowPilot is a focused mobile-first ticketing and workflow management system that enables teams to submit, assign, track, discuss, and resolve tickets in a centralized workspace. The application prioritizes a clear ticket board, simple status tracking, role-based assignment, threaded discussions, event-driven notifications, dashboards, automation, and optional AI assistance. Engineering and team workflow specifications are maintained separately in `ENGINEERING.md` and `TEAM.md` respectively.
+FlowPilot is a focused mobile-first ticketing and workflow management system that enables teams to submit, assign, track, discuss, and resolve tickets in a centralized workspace. The application prioritizes a clear ticket board, simple status tracking, role-based assignment, threaded discussions, event-driven notifications, dashboards, automation, and optional AI assistance. Engineering and team workflow specifications are maintained separately in `ENGINEERING.md` and `TEAM_WORKFLOW.md` respectively.

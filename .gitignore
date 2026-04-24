@@ -1,1 +1,18 @@
 .codex
+.gradle-home/
+.env
+.env.*
+!.env.example
+
+# Java / Gradle
+**/build/
+**/.gradle/
+**/out/
+
+# IDEs
+**/.idea/
+**/*.iml
+**/.vscode/
+
+# OS
+.DS_Store
